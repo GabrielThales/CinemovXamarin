@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.FilmeDetails">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="StackLayoutMainFilmesDetail">
+                <Label x:Name="LabelNomeFilme" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                <Image x:Name="ImagePoster" HorizontalOptions="Center"></Image>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <ImageButton HeightRequest="50" x:Name="ImageButtonAddFavoritos" Clicked="ImageButtonAddFavoritos_Clicked" Source="add_favoritos.png"></ImageButton>
+                    <ImageButton HeightRequest="50" x:Name="ImageButtonAddWatchList" Clicked="ImageButtonAddWatchList_Clicked" Source="add_watchlist.png"></ImageButton>
+                    <ImageButton HeightRequest="50" x:Name="ImageButtonAvaliacao" Clicked="ImageButtonAvaliacao_Clicked" Source="avaliacao.png"></ImageButton>
+                </StackLayout>
+                <Button Text="Ouvir Descrição" x:Name="ButtonOuvir" Clicked="ButtonOuvir_Clicked"></Button>
+                <Label x:Name="LabelTagLine" HorizontalOptions="Center"></Label>
+                <Label x:Name="LabelOverview" HorizontalTextAlignment="Center"></Label>
+                <StackLayout>
+                    <Label Text="Sobre o Filme" FontSize="Subtitle" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                    <Label x:Name="LabelVoteAverage"></Label>
+                    <Label x:Name="LabelBudget"></Label>
+                    <Label x:Name="LabelRuntime"></Label>
+                    <Label x:Name="LabelReleaseDate"></Label>
+                    <Label x:Name="LabelStatus"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

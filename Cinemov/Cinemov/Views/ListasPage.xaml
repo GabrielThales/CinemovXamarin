@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.ListasPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Listas" FontSize="Large" HorizontalOptions="Center"></Label>
+            <Picker x:Name="PickerListas" SelectedIndexChanged="PickerListas_SelectedIndexChanged" SelectedIndex="0">
+                <Picker.Items>
+                    <x:String>Favoritos</x:String>
+                    <x:String>Watchlist</x:String>
+                    <x:String>Avaliados</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <ListView x:Name="ListViewListaFilme">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding title}" Detail="{Binding vote_average}" ImageSource="{Binding poster_path}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

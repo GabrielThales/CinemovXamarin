@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.SerieDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelNome" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"></Label>
+            <Image x:Name="ImagePoster" HorizontalOptions="Center"></Image>
+            <Label x:Name="LabelOverview" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+            <StackLayout>
+                <Label></Label>
+            </StackLayout>
+            <Label Text="Página ainda em Construção :)" TextColor="Red"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

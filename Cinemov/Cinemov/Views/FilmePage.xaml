@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.FilmePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="Novidades!!!" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"></Label>
+                    <CarouselView x:Name="CarouselDiscoverFilmes" IsScrollAnimated="True" HeightRequest="300">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ImageButton Source="{Binding poster_path}" x:Name="ImageNovidadeButton" Clicked="ImageNovidadeButton_Clicked" Grid.Row="0" Grid.Column="0"></ImageButton>
+                                    <StackLayout HorizontalOptions="End" Grid.Row="0" Grid.Column="1">
+                                        <Label Text="{Binding title}" FontSize="Subtitle" Grid.Row="0" Grid.Column="1"></Label>
+                                        <Label Text="{Binding overview}" Grid.Row="1" Grid.Column="1"></Label>
+                                    </StackLayout>
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </StackLayout>
+                
+
+
+                <StackLayout>
+                    <Label Text="Suas Avaliacções" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"></Label>
+                    <ListView x:Name="ListViewAvaliacoes">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell Text="{Binding Titulo}" Detail="{Binding FilmeTitulo}" ImageSource="{Binding Poster}"></ImageCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

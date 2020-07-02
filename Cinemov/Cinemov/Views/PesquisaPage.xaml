@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.PesquisaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <SearchBar Placeholder="Digite Sua Pesquisa" x:Name="SearchBarPesquisaFilme" HorizontalOptions="Start"  SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            </StackLayout>
+            <Picker x:Name="PickerTipo">
+                <Picker.Items>
+                    <x:String>Filme</x:String>
+                    <x:String>Pessoa</x:String>
+                    <x:String>Série</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+            <StackLayout x:Name="StackLayoutFilme" IsVisible="False">
+                <ListView x:Name="ListViewFilme">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding title}" Detail="{Binding vote_average}" ImageSource="{Binding poster_path}"></ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <StackLayout x:Name="StackLayoutSerie">
+                <ListView x:Name="ListViewSerie">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding name}" Detail="{Binding vote_average}" ImageSource="{Binding poster_path}"></ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <StackLayout x:Name="StackLayoutPessoa" IsVisible="False">
+                <ListView x:Name="ListViewPessoa">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding name}" Detail="{Binding popularity}" ImageSource="{Binding profile_path}"></ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

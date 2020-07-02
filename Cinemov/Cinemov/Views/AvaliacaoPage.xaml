@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.AvaliacaoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelNomeFilme" FontSize="Medium" FontAttributes="Bold"></Label>
+            <Image x:Name="ImagePoster" HorizontalOptions="Center"></Image>
+            <Label x:Name="LabelTitulo" FontSize="Medium" HorizontalOptions="Center"></Label>
+            <Label x:Name="LabelMeuVoto" HorizontalOptions="Center"></Label>
+            <Label x:Name="LabelDescricao" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

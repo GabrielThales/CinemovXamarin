@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cinemov.Views.LoginPage"
+             BackgroundImageSource="background2.jpg">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Styles/LoginPageStyle.css" />
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Cinemov" TextColor="#BF7B54" FontSize="Header" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Text="Tenha as melhores recomendações de filmes e avalie os filmes assistidos" TextColor="#BF7B54" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+            <StackLayout VerticalOptions="Center" x:Name="StackLayoutLogin">
+                <Label Text="Login"></Label>
+                <Entry Placeholder="Login" PlaceholderColor="#BF7B54" TextColor="#BF7B54" x:Name="EntryLogin"></Entry>
+                <Label Text="Senha"></Label>
+                <Entry Placeholder="Senha" PlaceholderColor="#BF7B54" TextColor="#BF7B54" x:Name="EntrySenha" IsPassword="True"></Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Button x:Name="ButtonLogin" Text="Entrar" Clicked="ButtonLogin_Clicked" BackgroundColor="#BF7B54"></Button>
+                    <Button x:Name="ButtonCriarConta" Text="Criar Conta" Clicked="ButtonCriarConta_Clicked" BackgroundColor="#BF7B54"></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
